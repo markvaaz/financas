@@ -16,9 +16,3 @@ body,html,head{
   user-select:none;
   overflow:hidden;
 }
-.far{
-  color:#000;
-  display:block;
-  width:100px;
-  margin:30px;
-}

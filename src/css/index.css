@@ -1,1 +1,7 @@
 @import url("./default.css");
+
+.icon{
+  font-size: 40px;
+  line-height: 55px;
+  padding-left: 15px;
+}
