@@ -16,3 +16,11 @@ body,html,head{
   user-select:none;
   overflow:hidden;
 }
+.icon{
+  font-size: 35px;
+  line-height: 55px;
+  padding-left: 15px;
+}
+.top-bar .title{
+  line-height:55px;
+}
