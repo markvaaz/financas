@@ -24,3 +24,10 @@ body,html,head{
 .top-bar .title{
   line-height:55px;
 }
+.container{
+  position: absolute;
+  top:55px;
+  left:0;
+  width:100%;
+  height:100%;
+}
