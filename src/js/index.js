@@ -22,28 +22,31 @@ let calculos = {
   salario:function(){
     let resultado = 0
     for(let i = 0; i < card.length; i++) resultado += card[i].valor / card[i].parcelas;
-    return ((config.salarioLiquido - resultado) + config.horasExtras);
+    return calculos.converter((config.salarioLiquido - resultado) + config.horasExtras);
   },
   dividaMensal:function(){
     let resultado = 0
     for(let i = 0; i < card.length; i++) resultado += card[i].valor / card[i].parcelas;
-    return resultado;
+    return calculos.converter(resultado);
   },
   divida:function(){
     let resultado = 0;
     for(let i = 0; i < card.length; i++) resultado += card[i].valor - ((card[i].valor / card[i].parcelas) * card[i].parcelasPagas);
-    return resultado;
+    return calculos.converter(resultado);
   },
   juros:function(item){
     let parcelas = item.valor / item.parcelas;
-    return (parcelas * (item.juros / 100)).toFixed(2);
+    return calculos.converter((parcelas * (item.juros / 100)).toFixed(2))
+  },
+  converter:function(item){
+    return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
   }
 }
 console.log(`
 Nome: ${config.nome}
 Sobra do salario desse mes: ${calculos.salario()}
-Salario bruto: ${config.salarioBruto}
-Salario Liquido: ${config.salarioLiquido}
+Salario bruto: ${calculos.converter(config.salarioBruto)}
+Salario Liquido: ${calculos.converter(config.salarioLiquido)}
 Divida desse mes: ${calculos.dividaMensal()}
 Divida restante total: ${calculos.divida()}
 `);
