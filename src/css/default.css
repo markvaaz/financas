@@ -19,7 +19,7 @@ body,html,head{
 .icon{
   font-size: 35px;
   line-height: 55px;
-  padding-left: 15px;
+  padding:0 15px;
 }
 .top-bar .title{
   line-height:55px;
