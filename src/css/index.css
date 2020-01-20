@@ -1,2 +1,41 @@
 @import url("./default.css");
-
+body{
+  background:#353f70;
+  color:#fff;
+}
+.top-bar{
+  background:rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.container .title{
+  font-size:25px;
+  text-align:center;
+  padding:40px;
+}
+.resumo{
+  box-sizing:border-box;
+  width:90%;
+  margin:0 auto;
+  display:grid;
+  background:#fff;
+  color:#000;
+  border-radius:6px;
+  padding:20px;
+}
+.resumo .row{
+  box-sizing:border-box;
+  padding:20px 0;
+  border-bottom:1px solid rgba(0,0,0,0.16);
+}
+.resumo .row:first-child{
+  padding-top:0;
+}
+.resumo .row:last-child{
+  padding-bottom:0;
+  border:none;
+}
+.row span{
+  text-align:right;
+  float:right;
+  font-weight:600;
+}
