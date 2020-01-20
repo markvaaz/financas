@@ -1,7 +1,6 @@
 let config = {
   nome:"Mark Vaaz",
-  salarioBruto:1257.69,
-  salarioLiquido:1023,
+  renda:1023,
   horasExtras:0
 }
 

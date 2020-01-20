@@ -22,7 +22,7 @@ let calculos = {
   salario:function(){
     let resultado = 0
     for(let i = 0; i < card.length; i++) resultado += card[i].valor / card[i].parcelas;
-    return calculos.converter((config.salarioLiquido - resultado) + config.horasExtras);
+    return calculos.converter((config.renda - resultado) + config.rendaExtra);
   },
   dividaMensal:function(){
     let resultado = 0
@@ -45,8 +45,7 @@ let calculos = {
 console.log(`
 Nome: ${config.nome}
 Sobra do salario desse mes: ${calculos.salario()}
-Salario bruto: ${calculos.converter(config.salarioBruto)}
-Salario Liquido: ${calculos.converter(config.salarioLiquido)}
+Salario Liquido: ${calculos.converter(config.renda)}
 Divida desse mes: ${calculos.dividaMensal()}
 Divida restante total: ${calculos.divida()}
 `);
