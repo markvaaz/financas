@@ -1,1 +1,1 @@
-
+// Aqui ficará as funções de renderização de cards na pagina
