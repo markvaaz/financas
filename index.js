@@ -22,7 +22,7 @@ let calculos = {
   salario:function(){
     let resultado = 0
     for(let i = 0; i < card.length; i++) resultado += card[i].valor / card[i].parcelas;
-    return (config.salarioLiquido - resultado);
+    return ((config.salarioLiquido - resultado) + config.horasExtras);
   },
   dividaMensal:function(){
     let resultado = 0
@@ -39,9 +39,11 @@ let calculos = {
     return (parcelas * (item.juros / 100)).toFixed(2);
   }
 }
-
-console.log("Salario liquido: "+config.salarioLiquido);
-console.log("Divida mensal: "+calculos.dividaMensal());
-console.log("Sobra do salario do mes: "+calculos.salario());
-console.log("Divida Total: "+calculos.divida());
-console.log("O item 2 tem um juros de "+calculos.juros(card[1])+" Reais ao dia");
+console.log(`
+Nome: ${config.nome}
+Sobra do salario desse mes: ${calculos.salario()}
+Salario bruto: ${config.salarioBruto}
+Salario Liquido: ${config.salarioLiquido}
+Divida desse mes: ${calculos.dividaMensal()}
+Divida restante total: ${calculos.divida()}
+`);
