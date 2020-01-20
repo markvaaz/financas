@@ -1,0 +1,18 @@
+body,html,head{
+  padding:0;
+  margin:0;
+  font-family:sans-serif;
+}
+.top-bar{
+  box-sizing:border-box;
+  position:absolute;
+  top:0;
+  height:55px;
+  width:100%;
+  border-bottom:1px solid rgba(0,0,0,0.3);
+  display:grid;
+  grid-template-columns:55px auto auto;
+  font-family:sans-serif;
+  user-select:none;
+  overflow:hidden;
+}
