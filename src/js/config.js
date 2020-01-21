@@ -3,8 +3,6 @@ let config = {
   renda:1023,
   horasExtras:0
 }
-if(module.exports){
-  module.exports = config;
-}else{
-  export default config
-}
+
+//module.exports = config;
+export default config
