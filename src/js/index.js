@@ -27,7 +27,11 @@ let card = [
 let calculos = {
   salario:function(){
     let resultado = 0
-    for(let i = 0; i < card.length; i++) resultado += card[i].valor / (card[i].parcelas - card[i].parcelasPagas);
+    for(let i = 0; i < card.length; i++){ 
+      if(card[i].parcelas > card[i].parcelasPagas){
+        resultado += card[i].valor / card[i].parcelas;
+      }
+    }
     return calculos.converter((config.renda - resultado) + config.rendaExtra);
   },
   dividaMensal:function(){
