@@ -47,10 +47,3 @@ let calculos = {
     return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
   }
 }
-console.log(`
-Nome: ${config.nome}
-Sobra do salario desse mes: ${calculos.salario()}
-Salario Liquido: ${calculos.converter(config.renda)}
-Divida desse mes: ${calculos.dividaMensal()}
-Divida restante total: ${calculos.divida()}
-`);
