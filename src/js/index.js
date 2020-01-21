@@ -60,4 +60,5 @@ function load(){
   dt.innerHTML = calculos.divida();
 }
 console.log(calculos.salario());
+console.log((config.renda - resultado) + config.rendaExtra)
 window.onload = load();
