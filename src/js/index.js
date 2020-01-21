@@ -59,4 +59,5 @@ function load(){
   dm.innerHTML = calculos.dividaMensal();
   dt.innerHTML = calculos.divida();
 }
+console.log(calculos.salario());
 window.onload = load();
