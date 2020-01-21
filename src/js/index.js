@@ -48,3 +48,15 @@ let calculos = {
     return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
   }
 }
+function load(){
+  let rl = document.getElementById("rl");
+  let sm = document.getElementById("sm");
+  let dm = document.getElementById("dm");
+  let dt = document.getElementById("dt");
+  
+  rl.innerHTML = config.renda;
+  sm.innerHTML = calculos.salario();
+  dm.innerHTML = calculos.dividaMensal();
+  dt.innerHTML = calculos.divida();
+}
+load();
