@@ -57,7 +57,7 @@ function load(){
   let dm = document.getElementById("dm");
   let dt = document.getElementById("dt");
   
-  rl.innerHTML = config.renda;
+  rl.innerHTML = calculos.converter(config.renda);
   sm.innerHTML = calculos.salario();
   dm.innerHTML = calculos.dividaMensal();
   dt.innerHTML = calculos.divida();
