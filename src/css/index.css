@@ -3,12 +3,12 @@ body{
   background:#eee;
 }
 .top-bar, .bottom-bar{
-  background:rgba(63, 73, 119);
+  /*background:rgba(63, 73, 119);*/
+  background:#0d4c29;
   color:#fff;
 }
 .top-bar{
   border-bottom:1px solid rgba(255,255,255,0.03);
-
 }
 .container .title{
   font-size:25px;
