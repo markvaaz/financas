@@ -2,6 +2,7 @@
 //let config = require("./config");
 
 import {config as config} from "./config.js";
+window.config = config;
 
 console.log(config);
 
