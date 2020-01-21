@@ -59,4 +59,4 @@ function load(){
   dm.innerHTML = calculos.dividaMensal();
   dt.innerHTML = calculos.divida();
 }
-load();
+window.onload = load();
