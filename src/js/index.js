@@ -1,7 +1,7 @@
 
 //let config = require("./config");
 
-import config from "./config.js";
+import {config as config} from "./config.js";
 
 
 let card = [
