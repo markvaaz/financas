@@ -28,8 +28,10 @@ let calculos = {
   salario:function(){
     let resultado = 0
     for(let i = 0; i < card.length; i++) resultado += card[i].valor / card[i].parcelas;
-    console.log((config.renda - resultado) + config.rendaExtra)
-    return calculos.converter((config.renda - resultado) + config.rendaExtra);
+    console.log(resultado);
+    console.log(config.renda);
+    console.log(config.rendaExtra);
+    return calculos.converter((config.renda - resultado) + config.rendaExtra ? config.rendaExtra : 0);
   },
   dividaMensal:function(){
     let resultado = 0
