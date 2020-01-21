@@ -19,7 +19,7 @@ let card = [
     descricao:"",
     valor:2595,
     parcelas:6,
-    parcelasPagas:3,
+    parcelasPagas:6,
     vencimento:0,
     juros:0.5
   }
