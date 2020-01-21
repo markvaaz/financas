@@ -1,7 +1,7 @@
 @import url("./default.css");
 body{
-  background:#eee;
-  color:#fff;
+  /*background:#353f70;*/
+  /*color:#fff;*/
 }
 .top-bar, .bottom-bar{
   background:rgba(63, 73, 119);
