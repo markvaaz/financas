@@ -41,8 +41,9 @@ body,html,head{
 }
 .container{
   position: absolute;
-  top:55px;
-  left:0;
-  width:100%;
-  height:calc(100% - 55px);
+  top: 55px;
+  overflow: auto;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 110px);
 }

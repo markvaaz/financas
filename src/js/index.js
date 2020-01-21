@@ -1,4 +1,8 @@
-let config = require("./config");
+if(require){
+  let config = require("./config");
+}else{
+  import config from "./config.js";
+}
 
 let card = [
   {
