@@ -3,8 +3,10 @@ body{
   /*background:#353f70;*/
   /*color:#fff;*/
 }
+.top-bar, .bottom-bar{
+  background:rgba(63, 73, 119);
+}
 .top-bar{
-  background:rgba(255,255,255,0.05);
   border-bottom:1px solid rgba(255,255,255,0.03);
 }
 .container .title{
