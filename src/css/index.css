@@ -49,5 +49,8 @@ body{
 }
 .card{
   height:110px;
-  border-bottom:2px solid #ddd;
+  border-bottom:1px solid rgba(0,0,0,0.16);
+}
+.card:last-child{
+  border:none;
 }
