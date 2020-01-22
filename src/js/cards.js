@@ -1,6 +1,6 @@
 let card = [
   {
-    descricao:"",
+    descricao:"Celular",
     valor:1500,
     parcelas:10,
     parcelasPagas:0,
@@ -9,7 +9,7 @@ let card = [
     historico:null
   },
   {
-    descricao:"",
+    descricao:"Computador",
     valor:2595,
     parcelas:6,
     parcelasPagas:3,
