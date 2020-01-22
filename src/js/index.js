@@ -40,3 +40,4 @@ let calculos = {
   }
 }
 load.resumo();
+export {calculos as calculos}

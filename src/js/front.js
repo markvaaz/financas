@@ -1,3 +1,5 @@
+import {calculos as calculos} from "./index.js";
+
 let load = {
   resumo:function(){
     let rl = document.getElementById("rl");
