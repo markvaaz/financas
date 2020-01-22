@@ -1,27 +1,28 @@
-@import url("./default.css");
 body{
-  /*background:#353f70;*/
-  /*color:#fff;*/
+  background:#eee;
 }
 .top-bar, .bottom-bar{
-  background:rgba(63, 73, 119);
+  /*background:rgba(63, 73, 119);*/
+  background:#6c4fbb;
+  color:#fff;
 }
 .top-bar{
   border-bottom:1px solid rgba(255,255,255,0.03);
 }
+.top-bar .title{
+  padding-left:13px;
+}
 .container .title{
-  font-size:25px;
+  font-size:20px;
   text-align:center;
-  padding:40px;
+  padding:15px;
 }
 .resumo{
   box-sizing:border-box;
-  width:90%;
-  margin:0 auto;
+  margin:7px;
   display:grid;
   background:#fff;
   color:#000;
-  border-radius:6px;
   padding:20px;
 }
 .resumo .row{
@@ -40,4 +41,59 @@ body{
   text-align:right;
   float:right;
   font-weight:600;
+}
+.shadow{
+  box-shadow:rgba(0,0,0,0.3) 1px 1px 5px;
+}
+.cards{
+  margin:7px;
+}
+.cards *{
+  box-sizing:border-box;
+  user-select:none;
+}
+.card{
+  background:#fff;
+  height:165px;
+  overflow:hidden;
+  margin-bottom: 7px;
+  position:relative;
+}
+.card:last-child{
+  border:none;
+}
+.card.shadow:hover{
+  background:#f9f9f9;
+}
+.card div{
+  line-height:55px;
+  min-height:55px;
+  border-bottom:1px solid #ddd;
+  padding:0 20px;
+}
+.card > div span{
+  font-weight:bold;
+  position:absolute;
+  right:15px;
+}
+.descricao{
+  font-family: "Bebas Neue", cursive;
+  font-size:25px;
+}
+.descricao span{
+  font-weight:normal !important;
+}
+.descricao .fas{
+  position:absolute;
+  top:13px;
+  left:18px;
+  font-size:30px;
+}
+.card.full{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:99;
 }
