@@ -39,3 +39,4 @@ let calculos = {
     return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
   }
 }
+load.resumo();
