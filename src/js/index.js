@@ -8,6 +8,7 @@ import {create} from "./tools.js";
 window.config = config;
 window.card = card;
 window.load = load;
+window.create = create;
 
 let calculos = {
   salario:function(){

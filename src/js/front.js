@@ -14,3 +14,4 @@ let load = {
     
   }
 }
+export {load as load};
