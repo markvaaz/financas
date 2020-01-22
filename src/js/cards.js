@@ -5,7 +5,8 @@ let card = [
     parcelas:10,
     parcelasPagas:0,
     vencimento:0,
-    juros:0
+    juros:0,
+    historico:null
   },
   {
     descricao:"",
@@ -13,7 +14,8 @@ let card = [
     parcelas:6,
     parcelasPagas:3,
     vencimento:0,
-    juros:0.5
+    juros:0.5,
+    historico:null
   }
 ]
 

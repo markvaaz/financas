@@ -1,4 +1,6 @@
 import {calculos as calculos} from "./index.js";
+import {create as create} from "./tools.js";
+import {card as card} from "./cards.js";
 
 let load = {
   resumo:function(){
@@ -13,7 +15,19 @@ let load = {
     dt.innerHTML = calculos.divida();
   },
   cards:function(){
-    
+    let cardContainer = document.getElementById("cards");
+    let novoCard = create("div", {className:"card shadow", appendChild:[
+      create("div", {className:"descricao", innerHTML:`<i class="fas fa-grip-horizontal"></i> <span>${card.descricao}</span>`}),
+      create("div", {className:"valor", innerHTML:`Valor <span>${card.valor}</span>`}),
+      create("div", {className:"proxima-parcela", innerHTML:`Proxima parcela <span>${card.valor / card.parcelas}</span>`}),
+      create("div", {className:"valor-pago", innerHTML:`Valor pago <span>${(card.value / card.parcelas) * card.parcelasPagas}</span>`}),
+      create("div", {className:"parcelas", innerHTML:`Parcelas <span>${card.parcelas}</span>`}),
+      create("div", {className:"parcelas-pagas", innerHTML:`Parcelas pagas <span>${card.parcelasPagas}</span>`}),
+      create("div", {className:"vencimento", innerHTML:`Dia de vencimento <span>${card.vencimento}</span>`}),
+      create("div", {className:"juros", innerHTML:`Juros <span>${card.juros} %</span>`}),
+      create("div", {className:"historico", innerHTML:`Historico <span>${card.historico !== null ? card.historico : "Indisponível"}</span>`})
+    ]});
+    cardContainer.appendChild(novoCard);
   }
 }
 export {load as load};
