@@ -9,7 +9,6 @@ window.config = config;
 window.card = card;
 window.load = load;
 window.create = create;
-console.log(card)
 
 let calculos = {
   salario:function(){
