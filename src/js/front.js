@@ -2,7 +2,7 @@ import {calculos as calculos} from "./index.js";
 import {create as create} from "./tools.js";
 import {card as card} from "./cards.js";
 window.card = card;
-
+console.log(card)
 let load = {
   resumo:function(){
     let rl = document.getElementById("rl");
