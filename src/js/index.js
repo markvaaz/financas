@@ -2,8 +2,10 @@
 //let config = require("./config");
 import {config as config} from "./config.js";
 import {card as card} from "./cards.js";
+import {load as load} from "./front.js";
 window.config = config;
 window.card = card;
+window.load = load;
 
 let calculos = {
   salario:function(){
@@ -33,21 +35,3 @@ let calculos = {
     return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
   }
 }
-let load = {
-  resumo:function(){
-    let rl = document.getElementById("rl");
-    let sm = document.getElementById("sm");
-    let dm = document.getElementById("dm");
-    let dt = document.getElementById("dt");
-    
-    rl.innerHTML = calculos.converter(config.renda);
-    sm.innerHTML = calculos.salario();
-    dm.innerHTML = calculos.dividaMensal();
-    dt.innerHTML = calculos.divida();
-  },
-  cards:function(){
-    
-  }
-}
-console.log(calculos.salario());
-window.onload = load();
