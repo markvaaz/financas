@@ -1,9 +1,9 @@
 
 //let config = require("./config");
-import {config} from "./config.js";
-import {card} from "./cards.js";
-import {load} from "./front.js";
-import {create} from "./tools.js";
+import {config as config} from "./config.js";
+import {card as card} from "./cards.js";
+import {load as load} from "./front.js";
+import {create as create} from "./tools.js";
 
 window.config = config;
 window.card = card;
