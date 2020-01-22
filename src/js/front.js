@@ -23,7 +23,7 @@ let load = {
         create("div", {className:"descricao", innerHTML:`<i class="fas fa-grip-horizontal"></i> <span>${card[i].descricao}</span>`}),
         create("div", {className:"valor", innerHTML:`Valor <span>${calculos.converter(card[i].valor)}</span>`}),
         create("div", {className:"proxima-parcela", innerHTML:`Proxima parcela <span>${calculos.converter(card[i].valor / card[i].parcelas)}</span>`}),
-        create("div", {className:"valor-pago", innerHTML:`Valor pago <span>${calculos.converter((card[i].value / card[i].parcelas) * card[i].parcelasPagas)}</span>`}),
+        create("div", {className:"valor-pago", innerHTML:`Valor pago <span>${calculos.converter(card[i].parcelasPagas !== 0 ? (card[i].value / card[i].parcelas) * card[i].parcelasPagas : 0)}</span>`}),
         create("div", {className:"parcelas", innerHTML:`Parcelas <span>${card[i].parcelas}</span>`}),
         create("div", {className:"parcelas-pagas", innerHTML:`Parcelas pagas <span>${card[i].parcelasPagas}</span>`}),
         create("div", {className:"vencimento", innerHTML:`Dia de vencimento <span>${card[i].vencimento}</span>`}),
