@@ -40,4 +40,5 @@ let calculos = {
   }
 }
 load.resumo();
+load.cards();
 export {calculos as calculos}
