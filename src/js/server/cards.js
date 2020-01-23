@@ -23,7 +23,7 @@ let card = [
     valor:2595,
     parcelas:6,
     parcelasPagas:3,
-    vencimento:25,
+    vencimento:22,
     juros:0.5,
     historico:null
   },
@@ -32,7 +32,7 @@ let card = [
     valor:2595,
     parcelas:6,
     parcelasPagas:3,
-    vencimento:26,
+    vencimento:22,
     juros:0.5,
     historico:null
   }
