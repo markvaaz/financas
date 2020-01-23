@@ -1,7 +1,7 @@
 import {create as create, calculos as calculos} from "./ferramentas.js";
 import {card as card} from "./cards.js";
 import {config as config} from "./config.js";
-
+console.log(card)
 let load = {
   resumo:function(){
     let rl = document.getElementById("rl");
@@ -32,4 +32,4 @@ let load = {
     }
   }
 }
-export {load as load, calculos as calculos};
+export {load as load};
