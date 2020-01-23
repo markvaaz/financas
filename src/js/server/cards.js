@@ -17,6 +17,24 @@ let card = [
     vencimento:0,
     juros:0.5,
     historico:null
+  },
+  {
+    descricao:"Televisão",
+    valor:2595,
+    parcelas:6,
+    parcelasPagas:3,
+    vencimento:25,
+    juros:0.5,
+    historico:null
+  },
+  {
+    descricao:"Monitor",
+    valor:2595,
+    parcelas:6,
+    parcelasPagas:3,
+    vencimento:26,
+    juros:0.5,
+    historico:null
   }
 ]
 
