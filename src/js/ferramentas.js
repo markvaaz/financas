@@ -1,3 +1,4 @@
+import {config as config} from "./config.js";
 function create(elementName, attributes){
   let element = document.createElement(elementName);
   if(attributes !== undefined){

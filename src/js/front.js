@@ -2,6 +2,7 @@ import {create as create, calculos as calculos} from "./ferramentas.js";
 import {card as card} from "./cards.js";
 import {config as config} from "./config.js";
 console.log(card)
+console.log(calculos.salario(card));
 
 let load = {
   resumo:function(){
