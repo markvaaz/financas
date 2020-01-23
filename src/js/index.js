@@ -39,7 +39,7 @@ let load = {
     if(resultado){
       titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
       for(let i = 0; i < card.length; i++){
-        if(card[i].vencimento >= data.dia){
+        if(card[i].vencimento >= data.dia && card[i].parcelas > card[i].parcelasPagas){
           let novoCard = this.create(card[i]);
           cardContainer.appendChild(novoCard);
         }
@@ -47,8 +47,10 @@ let load = {
     }else{
       titleVencimentos.innerHTML = "Proximos vencimentos em "+data.mes(1);
       for(let i = 0; i < card.length; i++){
-        let novoCard = this.create(card[i]);
-        cardContainer.appendChild(novoCard);
+        if(card[i].parcelas > card[i].parcelasPagas){
+          let novoCard = this.create(card[i]);
+          cardContainer.appendChild(novoCard);
+        }
       }
     }
   },
