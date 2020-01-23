@@ -27,7 +27,7 @@ function create(elementName, attributes){
 
 // Para saber mais sobre a função calculos acesse https://github.com/markvaaz/financas
 let calculos = {
-  sobraDoSalario:function(calc){
+  sobraDaRenda:function(calc){
     let resultado = 0
     for(let i = 0; i < calc.length; i++){ 
       if(calc[i].parcelas > calc[i].parcelasPagas){
