@@ -64,7 +64,7 @@ let load = {
       create("div", {className:"juros", innerHTML:`Juros <span>${item.juros} %</span>`}),
       create("div", {className:"historico", innerHTML:`Historico <span>${item.historico !== null ? item.historico : "Indisponível"}</span>`})
     ]});
-    cardContainer.appendChild(novoCard);
+    return novoCard;
   }
 }
 load.resumo();
