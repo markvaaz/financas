@@ -1,3 +1,4 @@
+// Rodará no back-end com uma função que retornará um JSON com todos os cards e exporta-lo
 let card = [
   {
     descricao:"Celular",

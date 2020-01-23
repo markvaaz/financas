@@ -1,8 +1,8 @@
+// Rodará no back-end com uma função que retornará um JSON com as configurações do usuário
 let config = {
   nome:"Mark Vaaz",
   renda:1023,
   rendaExtra:0
 }
 
-//module.exports = config;
 export { config as config }

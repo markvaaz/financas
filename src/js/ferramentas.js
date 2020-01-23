@@ -1,4 +1,7 @@
+// import será substituido por HTTP request
 import {config as config} from "./config.js";
+
+// Para saber mais sobre a função create acesse https://github.com/markvaaz/financas
 function create(elementName, attributes){
   let element = document.createElement(elementName);
   if(attributes !== undefined){
@@ -21,6 +24,8 @@ function create(elementName, attributes){
   }
   return element;
 }
+
+// Para saber mais sobre a função calculos acesse https://github.com/markvaaz/financas
 let calculos = {
   sobraDoSalario:function(calc){
     let resultado = 0
