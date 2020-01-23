@@ -36,21 +36,21 @@ let tools = {
           resultado += calc[i].valor / calc[i].parcelas;
         }
       }
-      return calculos.converter((config.renda - resultado) + config.rendaExtra);
+      return this.converter((config.renda - resultado) + config.rendaExtra);
     },
     dividaMensal:function(calc){
       let resultado = 0
       for(let i = 0; i < calc.length; i++) resultado += calc[i].valor / calc[i].parcelas;
-      return calculos.converter(resultado);
+      return this.converter(resultado);
     },
     dividaTotal:function(calc){
       let resultado = 0;
       for(let i = 0; i < calc.length; i++) resultado += calc[i].valor - ((calc[i].valor / calc[i].parcelas) * calc[i].parcelasPagas);
-      return calculos.converter(resultado);
+      return this.converter(resultado);
     },
     juros:function(item){
       let parcelas = item.valor / item.parcelas;
-      return calculos.converter((parcelas * (item.juros / 100)).toFixed(2))
+      return this.converter((parcelas * (item.juros / 100)).toFixed(2))
     }
   },
   data:{
