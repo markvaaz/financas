@@ -1,6 +1,6 @@
 // Imports que serão substituidos por HTTP request
-import {config as config} from "./config.js";
-import {card as card} from "./cards.js";
+import {config as config} from "./server/config.js";
+import {card as card} from "./server/cards.js";
 // Importa ferramentas uteis 
 import {create as create, calculos as calculos} from "./ferramentas.js";
 

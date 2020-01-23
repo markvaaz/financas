@@ -1,5 +1,5 @@
 // import será substituido por HTTP request
-import {config as config} from "./config.js";
+import {config as config} from "./server/config.js";
 
 // Para saber mais sobre a função create acesse https://github.com/markvaaz/financas
 function create(elementName, attributes){
