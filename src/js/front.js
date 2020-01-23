@@ -1,6 +1,6 @@
+import {config as config} from "./config.js";
 import {create as create, calculos as calculos} from "./ferramentas.js";
 import {card as card} from "./cards.js";
-import {config as config} from "./config.js";
 
 let load = {
   resumo:function(){
