@@ -26,6 +26,9 @@ let tools = {
     return element;
   },
   calculos:{
+    converter:function(item){
+      return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
+    },
     sobraDaRenda:function(calc){
       let resultado = 0
       for(let i = 0; i < calc.length; i++){ 
@@ -33,24 +36,21 @@ let tools = {
           resultado += calc[i].valor / calc[i].parcelas;
         }
       }
-      return this.calculos.converter((config.renda - resultado) + config.rendaExtra);
+      return calculos.converter((config.renda - resultado) + config.rendaExtra);
     },
     dividaMensal:function(calc){
       let resultado = 0
       for(let i = 0; i < calc.length; i++) resultado += calc[i].valor / calc[i].parcelas;
-      return this.calculos.converter(resultado);
+      return calculos.converter(resultado);
     },
     dividaTotal:function(calc){
       let resultado = 0;
       for(let i = 0; i < calc.length; i++) resultado += calc[i].valor - ((calc[i].valor / calc[i].parcelas) * calc[i].parcelasPagas);
-      return this.calculos.converter(resultado);
+      return calculos.converter(resultado);
     },
     juros:function(item){
       let parcelas = item.valor / item.parcelas;
-      return this.calculos.converter((parcelas * (item.juros / 100)).toFixed(2))
-    },
-    converter:function(item){
-      return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
+      return calculos.converter((parcelas * (item.juros / 100)).toFixed(2))
     }
   },
   data:{
