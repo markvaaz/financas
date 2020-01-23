@@ -1,4 +1,4 @@
-import {create as create} from "./ferramentas.js";
+import {create as create, calculos as calculos} from "./ferramentas.js";
 import {card as card} from "./cards.js";
 import {config as config} from "./config.js";
 console.log(card)
