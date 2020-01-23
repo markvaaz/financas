@@ -7,6 +7,7 @@ import {tools as tools} from "./ferramentas.js";
 let calculos = tools.calculos;
 let create = tools.create;
 let data = tools.data;
+console.log(calculos)
 
 // Objeto resposável por carregar as informações no front-end
 let load = {
