@@ -20,4 +20,32 @@ function create(elementName, attributes){
   }
   return element;
 }
-export {create}
+let calculos = {
+  salario:function(calc){
+    let resultado = 0
+    for(let i = 0; i < calc.length; i++){ 
+      if(calc[i].parcelas > calc[i].parcelasPagas){
+        resultado += calc[i].valor / calc[i].parcelas;
+      }
+    }
+    return calculos.converter((config.renda - resultado) + config.rendaExtra);
+  },
+  dividaMensal:function(calc){
+    let resultado = 0
+    for(let i = 0; i < calc.length; i++) resultado += calc[i].valor / calc[i].parcelas;
+    return calculos.converter(resultado);
+  },
+  divida:function(calc){
+    let resultado = 0;
+    for(let i = 0; i < calc.length; i++) resultado += calc[i].valor - ((calc[i].valor / calc[i].parcelas) * calc[i].parcelasPagas);
+    return calculos.converter(resultado);
+  },
+  juros:function(item){
+    let parcelas = item.valor / item.parcelas;
+    return calculos.converter((parcelas * (item.juros / 100)).toFixed(2))
+  },
+  converter:function(item){
+    return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
+  }
+};
+export {create, calculos};
