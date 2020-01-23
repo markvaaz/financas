@@ -39,7 +39,7 @@ let load = {
     if(resultado){
       titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
     }else{
-      titleVencimentos.innerHTML = "Vencimentos de "+data.mes(1);
+      titleVencimentos.innerHTML = "Proximos vencimentos em "+data.mes(1);
     }
     for(let i = 0; i < card.length; i++){
       let novoCard = create("div", {className:"card shadow", appendChild:[
