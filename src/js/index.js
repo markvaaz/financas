@@ -1,8 +1,12 @@
 // Imports que serão substituidos por HTTP request
 import {config as config} from "./server/config.js";
 import {card as card} from "./server/cards.js";
-// Importa ferramentas uteis 
-import {create as create, calculos as calculos} from "./ferramentas.js";
+// Importa ferramentas
+import {tools as tools} from "./ferramentas.js";
+
+let calculos = tools.calculos;
+let create = tools.create;
+let data = tools.data;
 
 // Objeto resposável por carregar as informações no front-end
 let load = {
@@ -23,6 +27,16 @@ let load = {
   },
   cards:function(){
     let cardContainer = document.getElementById("cards");
+    let titleVencimentos = document.getElementById("title-vencimentos");
+    if(card){
+      for(let i = 0; i < card.length; i++){
+        if(card[i].vencimento >= data.dia){
+          titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
+        }else{
+          titleVencimentos.innerHTML = "Vencimentos de "+data.mes(1);
+        }
+      }
+    }
     for(let i = 0; i < card.length; i++){
       let novoCard = create("div", {className:"card shadow", appendChild:[
         create("div", {className:"descricao", innerHTML:`<i class="fas fa-grip-horizontal"></i> <span>${card[i].descricao}</span>`}),
