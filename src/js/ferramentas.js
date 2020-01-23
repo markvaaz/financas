@@ -22,7 +22,7 @@ function create(elementName, attributes){
   return element;
 }
 let calculos = {
-  salario:function(calc){
+  sobraDoSalario:function(calc){
     let resultado = 0
     for(let i = 0; i < calc.length; i++){ 
       if(calc[i].parcelas > calc[i].parcelasPagas){
@@ -36,7 +36,7 @@ let calculos = {
     for(let i = 0; i < calc.length; i++) resultado += calc[i].valor / calc[i].parcelas;
     return calculos.converter(resultado);
   },
-  divida:function(calc){
+  dividaTotal:function(calc){
     let resultado = 0;
     for(let i = 0; i < calc.length; i++) resultado += calc[i].valor - ((calc[i].valor / calc[i].parcelas) * calc[i].parcelasPagas);
     return calculos.converter(resultado);

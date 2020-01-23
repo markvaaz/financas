@@ -1,8 +1,6 @@
 import {create as create, calculos as calculos} from "./ferramentas.js";
 import {card as card} from "./cards.js";
 import {config as config} from "./config.js";
-console.log(card)
-console.log(calculos.salario(card));
 
 let load = {
   resumo:function(){
@@ -12,9 +10,9 @@ let load = {
     let dt = document.getElementById("dt");
     
     rl.innerHTML = calculos.converter(config.renda);
-    sm.innerHTML = calculos.salario(card);
+    sm.innerHTML = calculos.sobraDoSalario(card);
     dm.innerHTML = calculos.dividaMensal(card);
-    dt.innerHTML = calculos.divida(card);
+    dt.innerHTML = calculos.dividaTotal(card);
   },
   cards:function(){
     let cardContainer = document.getElementById("cards");
