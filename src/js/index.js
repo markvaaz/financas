@@ -7,7 +7,6 @@ import {tools as tools} from "./ferramentas.js";
 let create = tools.create;
 let data = tools.data;
 let calculos = tools.calculos;
-console.log(calculos)
 
 // Objeto resposável por carregar as informações no front-end
 let load = {
@@ -29,14 +28,18 @@ let load = {
   cards:function(){
     let cardContainer = document.getElementById("cards");
     let titleVencimentos = document.getElementById("title-vencimentos");
+    let resultado = false;
     if(card){
       for(let i = 0; i < card.length; i++){
         if(card[i].vencimento >= data.dia){
-          titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
-        }else{
-          titleVencimentos.innerHTML = "Vencimentos de "+data.mes(1);
+          resultado = true;
         }
       }
+    }
+    if(resultado){
+      titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
+    }else{
+      titleVencimentos.innerHTML = "Vencimentos de "+data.mes(1);
     }
     for(let i = 0; i < card.length; i++){
       let novoCard = create("div", {className:"card shadow", appendChild:[
