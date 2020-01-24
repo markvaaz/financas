@@ -17,7 +17,7 @@ let card = [
     parcelas:6,
     parcelasPagas:5,
     ultimoDiaPago:22,
-    ultimoMesPago:0,
+    ultimoMesPago:1,
     vencimento:15,
     juros:0.5,
     historico:null
@@ -27,8 +27,8 @@ let card = [
     valor:2595,
     parcelas:6,
     parcelasPagas:0,
-    ultimoDiaPago:null,
-    ultimoMesPago:null,
+    ultimoDiaPago:22,
+    ultimoMesPago:1,
     vencimento:22,
     juros:0.5,
     historico:null
@@ -38,8 +38,8 @@ let card = [
     valor:100,
     parcelas:2,
     parcelasPagas:1,
-    ultimoDiaPago:25,
-    ultimoMesPago:0,
+    ultimoDiaPago:22,
+    ultimoMesPago:1,
     vencimento:25,
     juros:0.5,
     historico:null
