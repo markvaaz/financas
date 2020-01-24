@@ -6,7 +6,7 @@ let card = [
     parcelas:10,
     parcelasPagas:1,
     ultimoDiaPago:22,
-    ultimoMesPago:0,
+    ultimoMesPago:1,
     vencimento:22,
     juros:0,
     historico:null
