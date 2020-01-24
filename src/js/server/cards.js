@@ -26,7 +26,7 @@ let card = [
     descricao:"Televisão",
     valor:2595,
     parcelas:6,
-    parcelasPagas:3,
+    parcelasPagas:0,
     ultimoDiaPago:null,
     ultimoMesPago:null,
     vencimento:22,
