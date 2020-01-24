@@ -43,6 +43,7 @@ let load = {
           if(card[i].ultimoDiaPago !== null && card[i].ultimoMesPago !== null){
             if(card[i].ultimoMesPago < (data.mesNumero+1)){
               let novoCard = this.create(card[i]);
+              console.log(card[i]);
               cardContainer.appendChild(novoCard);
             }
           }
