@@ -40,12 +40,8 @@ let load = {
       titleVencimentos.innerHTML = "Vencimentos de "+data.mes();
       for(let i = 0; i < card.length; i++){
         if(card[i].vencimento >= data.dia && card[i].parcelas > card[i].parcelasPagas){
-          console.log("if1")
           if(card[i].ultimoDiaPago !== null && card[i].ultimoMesPago !== null){
-            console.log("if2")
-            console.log(data.mesNumero+1)
             if(card[i].ultimoMesPago < (data.mesNumero+1)){
-              console.log("if3")
               let novoCard = this.create(card[i]);
               cardContainer.appendChild(novoCard);
             }
