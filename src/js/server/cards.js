@@ -4,10 +4,10 @@ let card = [
     descricao:"Celular",
     valor:1500,
     parcelas:10,
-    parcelasPagas:0,
+    parcelasPagas:1,
     ultimoDiaPago:22,
     ultimoMesPago:0,
-    vencimento:0,
+    vencimento:22,
     juros:0,
     historico:null
   },
@@ -15,10 +15,10 @@ let card = [
     descricao:"Computador",
     valor:2595,
     parcelas:6,
-    parcelasPagas:6,
+    parcelasPagas:5,
     ultimoDiaPago:22,
     ultimoMesPago:0,
-    vencimento:0,
+    vencimento:15,
     juros:0.5,
     historico:null
   },
@@ -28,7 +28,7 @@ let card = [
     parcelas:6,
     parcelasPagas:3,
     ultimoDiaPago:null,
-    ultimoMesPago:0,
+    ultimoMesPago:null,
     vencimento:22,
     juros:0.5,
     historico:null
@@ -40,7 +40,7 @@ let card = [
     parcelasPagas:1,
     ultimoDiaPago:25,
     ultimoMesPago:0,
-    vencimento:22,
+    vencimento:25,
     juros:0.5,
     historico:null
   }
