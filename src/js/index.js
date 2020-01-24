@@ -43,7 +43,7 @@ let load = {
           console.log("if1")
           if(card[i].ultimoDiaPago !== null && card[i].ultimoMesPago !== null){
             console.log("if2")
-            console.log(data.mesNumero)
+            console.log(data.mesNumero+1)
             if(card[i].ultimoDiaPago < data.dia && card[i].ultimoMesPago < (data.mesNumero+1)){
               console.log("if3")
               let novoCard = this.create(card[i]);
