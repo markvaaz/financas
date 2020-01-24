@@ -1,6 +1,5 @@
 // import será substituido por HTTP request
 import {config as config} from "./server/config.js";
-let functionData = new Date();
 // Para saber mais sobre a função create acesse https://github.com/markvaaz/financas
 let tools = {
   create:function(elementName, attributes){
@@ -54,16 +53,17 @@ let tools = {
     }
   },
   data:{
-    dia:functionData.getDate(),
+    dia:new Date().getDate(),
     mes:function(soma){
       let meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
       if(!soma){
-        return meses[functionData.getMonth()];
+        return meses[new Date().getMonth()];
       }else{
-        return meses[functionData.getMonth() + soma];
+        return meses[new Date().getMonth() + soma];
       }
     },
-    ano:functionData.getFullYear()
+    mesNumero:new Date().getMonth(),
+    ano:new Date().getFullYear()
   }
 }
 export {tools};
