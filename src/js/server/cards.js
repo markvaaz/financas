@@ -32,9 +32,9 @@ let card = [
   },
   {
     descricao:"Monitor",
-    valor:2595,
-    parcelas:6,
-    parcelasPagas:3,
+    valor:100,
+    parcelas:2,
+    parcelasPagas:1,
     ultimoMesPago:0,
     vencimento:22,
     juros:0.5,
