@@ -50,6 +50,7 @@ let load = {
         }
       }
     }else{
+      console.log("cheogu aqui")
       titleVencimentos.innerHTML = "Proximos vencimentos em "+data.mes(1);
       for(let i = 0; i < card.length; i++){
         if(card[i].parcelas > card[i].parcelasPagas){
