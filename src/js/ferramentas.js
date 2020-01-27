@@ -29,27 +29,49 @@ let tools = {
       return item.toLocaleString('pt-BR', {minimumFractionDigits: 2,  maximumFractionDigits: 2, style: 'currency', currency: 'BRL'});
     },
     sobraDaRenda:function(calc){
-      let resultado = 0
-      for(let i = 0; i < calc.length; i++){ 
-        if(calc[i].parcelas > calc[i].parcelasPagas){
-          resultado += calc[i].valor / calc[i].parcelas;
-        }
-      }
-      return this.converter((config.renda - resultado) + config.rendaExtra);
+      let resultado = 0;
+      calc.forEach(calcItem => {
+        resultado += calcItem.parcelasPagas < calcItem.parcelas ? calcItem.valor / calcItem.parcelas : 0;
+      });
+      return this.converter(config.renda - resultado);
     },
     dividaMensal:function(calc){
-      let resultado = 0
-      for(let i = 0; i < calc.length; i++) resultado += calc[i].valor / calc[i].parcelas;
+      let resultado = 0;
+      calc.forEach(calcItem => {
+        resultado += calcItem.parcelasPagas < calcItem.parcelas ? calcItem.valor / calcItem.parcelas : 0;
+      });
       return this.converter(resultado);
     },
     dividaTotal:function(calc){
       let resultado = 0;
-      for(let i = 0; i < calc.length; i++) resultado += calc[i].valor - ((calc[i].valor / calc[i].parcelas) * calc[i].parcelasPagas);
+      calc.forEach(cardItem => {
+        resultado += cardItem.parcelasPagas > cardItem.parcelas ? 0 : (cardItem.valor / cardItem.parcelas) * (cardItem.parcelas - cardItem.parcelasPagas);
+      });
       return this.converter(resultado);
     },
-    juros:function(item){
+    juros:function(calc){
+      return calc.juros + "%";
+    },
+    jurosReais:function(item){
       let parcelas = item.valor / item.parcelas;
-      return this.converter((parcelas * (item.juros / 100)).toFixed(2))
+      let parcelasForamPagas = item.parcelas <= item.parcelasPagas;
+      
+      if(!parcelasForamPagas && ((item.ultimoMesPago < tools.data.mesNumero) || (item.ultimoAnoPago < tools.data.ano))){
+        if(item.tipoDeJuros === 0){
+          let ultimoDiaPago = new Date(item.ultimoMesPago+"/"+item.ultimoDiaPago+"/"+item.ultimoAnoPago);
+          let diaAtual = new Date();
+          let timeDiff = Math.abs(diaAtual.getTime() - ultimoDiaPago.getTime());
+          let diasSemPagar = Math.ceil(timeDiff / (1000 * 3600 * 24));
+          
+          return item.juros > 0 ? parcelas + (parcelas * ((item.juros / 100) * diasSemPagar)) : parcelas;
+        }else if(item.tipoDeJuros === 1){
+          let mesesSemPagar = item.ultimoMesPago > tools.data.mesNumero ? item.vencimento < tools.data.dia ? (tools.data.mesNumero + 13) - (item.ultimoMesPago+1) : (tools.data.mesNumero + 12) - (item.ultimoMesPago+1) : (tools.data.mesNumero+1) - (item.ultimoMesPago+1);
+          console.log(mesesSemPagar);
+          return item.juros > 0 ? parcelas + (parcelas * ((item.juros / 100) * mesesSemPagar)) : parcelas;
+        }
+      }else{
+        return parcelas;
+      }
     }
   },
   data:{
@@ -65,5 +87,5 @@ let tools = {
     mesNumero:new Date().getMonth(),
     ano:new Date().getFullYear()
   }
-}
+};
 export {tools};

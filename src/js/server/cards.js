@@ -1,49 +1,61 @@
 // Rodará no back-end com uma função que retornará um JSON com todos os cards e exporta-lo
 let card = [
   {
-    descricao:"Celular",
-    valor:1500,
+    descricao:"Pago esse mes",
+    valor:1000,
     parcelas:10,
-    parcelasPagas:1,
-    ultimoDiaPago:22,
-    ultimoMesPago:1,
-    vencimento:22,
-    juros:0,
-    historico:null
-  },
-  {
-    descricao:"Computador",
-    valor:2595,
-    parcelas:6,
     parcelasPagas:5,
-    ultimoDiaPago:22,
-    ultimoMesPago:1,
+    ultimoDiaPago:15,
+    ultimoMesPago:0,
+    ultimoAnoPago:2020,
     vencimento:15,
-    juros:0.5,
-    historico:null
+    primeiroMes:0,
+    juros:0,
+    tipoDeJuros:0,
+    historico:[]
   },
   {
-    descricao:"Televisão",
-    valor:2595,
-    parcelas:6,
+    descricao:"Pago mes passado",
+    valor:1000,
+    parcelas:10,
+    parcelasPagas:10,
+    ultimoDiaPago:15,
+    ultimoMesPago:11,
+    ultimoAnoPago:2019,
+    vencimento:15,
+    primeiroMes:0,
+    juros:0,
+    tipoDeJuros:0,
+    historico:[]
+  },
+  {
+    descricao:"2 meses sem pagar !",
+    valor:1000,
+    parcelas:10,
+    parcelasPagas:9,
+    ultimoDiaPago:15,
+    ultimoMesPago:10,
+    ultimoAnoPago:2019,
+    vencimento:24,
+    primeiroMes:0,
+    juros:1,
+    tipoDeJuros:1,
+    historico:[]
+  },
+  {
+    descricao:"Nunca pago !",
+    valor:1000,
+    parcelas:10,
     parcelasPagas:0,
-    ultimoDiaPago:22,
-    ultimoMesPago:1,
-    vencimento:22,
-    juros:0.5,
-    historico:null
-  },
-  {
-    descricao:"Monitor",
-    valor:100,
-    parcelas:2,
-    parcelasPagas:1,
-    ultimoDiaPago:22,
-    ultimoMesPago:1,
-    vencimento:25,
-    juros:0.5,
-    historico:null
+    ultimoDiaPago:null,
+    ultimoMesPago:null,
+    ultimoAnoPago:null,
+    vencimento:26,
+    primeiroMes:0,
+    juros:0,
+    tipoDeJuros:0,
+    historico:[]
   }
-]
+];
 
 export {card as card};
