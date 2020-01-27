@@ -31,21 +31,24 @@ let tools = {
     sobraDaRenda:function(calc){
       let resultado = 0;
       calc.forEach(calcItem => {
-        resultado += calcItem.parcelasPagas < calcItem.parcelas ? calcItem.valor / calcItem.parcelas : 0;
+        let juros = this.jurosReais(calcItem);
+        resultado += calcItem.parcelasPagas < calcItem.parcelas ? juros : 0;
       });
       return this.converter(config.renda - resultado);
     },
     dividaMensal:function(calc){
       let resultado = 0;
       calc.forEach(calcItem => {
-        resultado += calcItem.parcelasPagas < calcItem.parcelas ? calcItem.valor / calcItem.parcelas : 0;
+        let juros = this.jurosReais(calcItem);
+        resultado += calcItem.parcelasPagas < calcItem.parcelas ? juros : 0;
       });
       return this.converter(resultado);
     },
     dividaTotal:function(calc){
       let resultado = 0;
-      calc.forEach(cardItem => {
-        resultado += cardItem.parcelasPagas > cardItem.parcelas ? 0 : (cardItem.valor / cardItem.parcelas) * (cardItem.parcelas - cardItem.parcelasPagas);
+      calc.forEach(calcItem => {
+        let juros = this.jurosReais(calcItem);
+        resultado += calcItem.parcelasPagas > calcItem.parcelas ? 0 : juros * (calcItem.parcelas - calcItem.parcelasPagas);
       });
       return this.converter(resultado);
     },
