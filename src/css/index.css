@@ -13,6 +13,10 @@ body{
 .top-bar .title{
   padding-left:13px;
 }
+.bottom-bar{
+  display:grid;
+  grid-template-columns:repeat(3, 33.33%);
+}
 .container .title{
   font-size:20px;
   text-align:center;
