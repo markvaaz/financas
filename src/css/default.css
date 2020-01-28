@@ -18,8 +18,6 @@ body,html,head{
 }
 .bottom-bar{
   position:fixed;
-  display:grid;
-  grid-template-columns:repeat(3, 33.33%);
   bottom:0;
   width:100%;
   height:55px;
