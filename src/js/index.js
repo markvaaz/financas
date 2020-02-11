@@ -65,6 +65,11 @@ let load = {
       create("div", {className:"juros", innerHTML:`Juros <span>${item.juros} %</span>`}),
       create("div", {className:"historico", innerHTML:`Historico <span>${item.historico !== null ? item.historico : "Indisponível"}</span>`})
     ]});
+    $("#container").sortable({
+      handle:'.fa-grip-horizontal',
+      placeholder:'card-placeholder',
+      tolerance:'pointer'
+    });
     return novoCard;
   }
 };

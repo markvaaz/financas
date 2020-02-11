@@ -64,6 +64,14 @@ body{
   margin-bottom: 7px;
   position:relative;
 }
+.card-placeholder{
+  background:#fff;
+  border:1px dotted #444;
+  height:220px;
+  overflow:hidden;
+  margin-bottom: 7px;
+  position:relative;
+}
 .card:last-child{
   border:none;
 }
