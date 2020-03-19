@@ -69,7 +69,7 @@ let tools = {
           return item.juros > 0 ? parcelas + (parcelas * ((item.juros / 100) * diasSemPagar)) : parcelas;
         }else if(item.tipoDeJuros === 1){
           let mesesSemPagar = item.ultimoMesPago > tools.data.mesNumero ? item.vencimento < tools.data.dia ? (tools.data.mesNumero + 13) - (item.ultimoMesPago+1) : (tools.data.mesNumero + 12) - (item.ultimoMesPago+1) : (tools.data.mesNumero+1) - (item.ultimoMesPago+1);
-          console.log(mesesSemPagar);
+          
           return item.juros > 0 ? parcelas + (parcelas * ((item.juros / 100) * mesesSemPagar)) : parcelas;
         }
       }else{

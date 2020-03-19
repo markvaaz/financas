@@ -65,7 +65,12 @@ let load = {
       create("div", {className:"juros", innerHTML:`Juros <span>${item.juros} %</span>`}),
       create("div", {className:"historico", innerHTML:`Historico <span>${item.historico !== null ? item.historico : "Indisponível"}</span>`})
     ]});
-    $("#container").sortable({
+    novoCard.addEventListener("click", (event) => {
+      if(!event.target.className.includes("grip")){
+        novoCard.classList.toggle("full");
+      }
+    });
+    $("#cards").sortable({
       handle:'.fa-grip-horizontal',
       placeholder:'card-placeholder',
       tolerance:'pointer'
